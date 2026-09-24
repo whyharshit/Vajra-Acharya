@@ -32,9 +32,7 @@ Ask mode: answer the learner's question as Vajra Acharya, the electrical safety 
 
 export async function POST(req: NextRequest) {
   const session = await getLearnerSession();
-  if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-
-  const rl = rateLimit(rateLimitKey(req.headers, session.learnerId, "gemini-live-token"), 10);
+  const rl = rateLimit(rateLimitKey(req.headers, session?.learnerId, "gemini-live-token"), 10);
   if (!rl.allowed) {
     return NextResponse.json(
       { error: "Too many voice sessions. Please wait.", retryInSeconds: rl.resetInSeconds },

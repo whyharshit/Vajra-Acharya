@@ -1,7 +1,6 @@
 ﻿import type { Metadata, Viewport } from "next";
 import { Newsreader, Geist, JetBrains_Mono, Hind_Siliguri, Hind } from "next/font/google";
 import "./globals.css";
-import PhoneGate from "@/components/PhoneGate";
 
 const newsreader = Newsreader({
   subsets: ["latin"],
@@ -62,7 +61,7 @@ export default function RootLayout({
   return (
     <html lang="en" data-scroll-behavior="smooth" data-theme="light" className={`h-full ${fontVars}`}>
       <body className="h-full bg-paper text-ink font-sans">
-        <PhoneGate>{children}</PhoneGate>
+        {children}
       </body>
     </html>
   );
