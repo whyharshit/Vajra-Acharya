@@ -25,3 +25,5 @@ unified-telegram-bot/
 vivek-acharya-app-main/
 *.zip
 __pycache__/
+
+.vercel
