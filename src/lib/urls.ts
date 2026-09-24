@@ -44,12 +44,6 @@ export const MANDI_API_URL =
   process.env.MANDI_API_URL ||
   "https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070";
 
-// ── Telegram API ────────────────────────────────────────────────────────────
-
-/** Telegram Bot API base URL (rarely changes, but kept here for completeness) */
-export const TELEGRAM_API_BASE =
-  process.env.TELEGRAM_API_BASE || "https://api.telegram.org";
-
 // ── Helpers ─────────────────────────────────────────────────────────────────
 
 /**
